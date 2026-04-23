@@ -2,14 +2,16 @@
 using namespace std;
 
 bool isSorted(vector<int>nums, int n){
-    if(n==1){
+    if(n==0 || n==1){
         return true;
     }
-    if(nums[n-1]>=nums[n-2]){
-        return isSorted(nums,n-1);
-    }else{
-        return false;
-    }
+    // if(nums[n-1]>=nums[n-2]){
+    //     return isSorted(nums,n-1);
+    // }else{
+    //     return false;
+    // }
+
+    return nums[n-1]>=nums[n-2] && isSorted(nums,n-1);//Here it will only become recursive when first statement satiesfies else becomes false
 }
 
 int main(){
