@@ -9,6 +9,7 @@ bool isOkay(vector<vector<int>>&grid,int row,int col,int num,int n){
         return true;
     }
 
+    
     int ans1=isOkay(grid,row-2,col+1,num+1,n);
     int ans2=isOkay(grid,row-1,col+2,num+1,n);
     int ans3=isOkay(grid,row+1,col+2,num+1,n);
